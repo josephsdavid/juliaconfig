@@ -12,14 +12,4 @@ end
 # TODO: add testenv into the thing
 
 
-const mykeys = Dict{Any,Any}(
-    "^r" => fzf_hist_search,
-)
-
-
-
-function customize_keys(repl)
-    repl.interface = REPL.setup_interface(repl; extra_repl_keymap = mykeys)
-end
-atreplinit(customize_keys)
 
